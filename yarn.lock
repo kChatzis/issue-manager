@@ -289,6 +289,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/client@npm:5.21.1":
+  version: 5.21.1
+  resolution: "@prisma/client@npm:5.21.1"
+  peerDependencies:
+    prisma: "*"
+  peerDependenciesMeta:
+    prisma:
+      optional: true
+  checksum: 10c0/066bf678d6bda048893eb9080818339a99bba995a0ba19935cccda30a10eb46c6674bc445bbbbb37881e52d3010c72ce4a28565156b80bfea5438cafd9868941
+  languageName: node
+  linkType: hard
+
 "@prisma/debug@npm:5.21.1":
   version: 5.21.1
   resolution: "@prisma/debug@npm:5.21.1"
@@ -2409,6 +2421,7 @@ __metadata:
   resolution: "issue-manager@workspace:."
   dependencies:
     "@prisma/adapter-pg": "npm:^5.21.1"
+    "@prisma/client": "npm:5.21.1"
     "@types/node": "npm:^20"
     "@types/pg": "npm:^8"
     "@types/react": "npm:^18"
