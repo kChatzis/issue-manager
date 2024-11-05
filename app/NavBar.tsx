@@ -1,7 +1,10 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { BsBugFill } from "react-icons/bs";
 
 export default function NavBar() {
+  const currentPath = usePathname();
   const links = [
     { label: "Dashboard", href: "/" },
     { label: "Issues", href: "/issues" },
@@ -16,9 +19,9 @@ export default function NavBar() {
           <Link
             key={link.href}
             href={link.href}
-            className={
-              "text-violet-600 hover:text-violet-900 transition-colors"
-            }
+            className={` ${
+              link.href === currentPath ? "text-violet-700" : "text-gray-500"
+            } hover:text-black transition-colors`}
           >
             {link.label}
           </Link>
