@@ -3687,6 +3687,7 @@ __metadata:
     prisma: "npm:^5.21.1"
     react: "npm:^18"
     react-dom: "npm:^18"
+    react-hook-form: "npm:^7.53.1"
     react-icons: "npm:^5.3.0"
     react-simplemde-editor: "npm:^5.2.0"
     tailwindcss: "npm:^3"
@@ -4783,6 +4784,15 @@ __metadata:
   peerDependencies:
     react: ^18.3.1
   checksum: 10c0/a752496c1941f958f2e8ac56239172296fcddce1365ce45222d04a1947e0cc5547df3e8447f855a81d6d39f008d7c32eab43db3712077f09e3f67c4874973e85
+  languageName: node
+  linkType: hard
+
+"react-hook-form@npm:^7.53.1":
+  version: 7.53.1
+  resolution: "react-hook-form@npm:7.53.1"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18 || ^19
+  checksum: 10c0/dd2466359a633f873755b366d367d51ab17100566b687fb3b098f704232bc6ab1c79d29f879151e492880ca5eeac35e9425fbe5a309e2a55f7a4b5baf7826e8d
   languageName: node
   linkType: hard
 
