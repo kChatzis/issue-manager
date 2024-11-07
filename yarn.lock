@@ -92,6 +92,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hookform/resolvers@npm:^3.9.1":
+  version: 3.9.1
+  resolution: "@hookform/resolvers@npm:3.9.1"
+  peerDependencies:
+    react-hook-form: ^7.0.0
+  checksum: 10c0/8a4056db3860b12ee30921ba352996104d6ae75ac45996d4c8b6df429e07ee73f5b87c82a22a15403789213f6f52f5fead1c2637b26ef624068b68d213362cd1
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.13.0":
   version: 0.13.0
   resolution: "@humanwhocodes/config-array@npm:0.13.0"
@@ -3725,6 +3734,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "issue-manager@workspace:."
   dependencies:
+    "@hookform/resolvers": "npm:^3.9.1"
     "@prisma/adapter-pg": "npm:^5.21.1"
     "@prisma/client": "npm:5.21.1"
     "@radix-ui/themes": "npm:^3.1.4"
