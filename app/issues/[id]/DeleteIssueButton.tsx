@@ -33,7 +33,7 @@ export default function DeleteIssueButton({ issueId }: { issueId: number }) {
                   }
                 }}
               >
-                Delet issue
+                Delete issue
               </Button>
             </AlertDialog.Action>
           </Flex>
