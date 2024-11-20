@@ -191,6 +191,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@next-auth/prisma-adapter@npm:1.0.7":
+  version: 1.0.7
+  resolution: "@next-auth/prisma-adapter@npm:1.0.7"
+  peerDependencies:
+    "@prisma/client": ">=2.26.0 || >=3"
+    next-auth: ^4
+  checksum: 10c0/ed69c7d1900bcb0081b8fb078e7bbe5a237c084ade78b79e97951e940b9e3110e85fc2887b01a17aecf2e4bc3364c97256f20873012669c9336613a5ee082526
+  languageName: node
+  linkType: hard
+
 "@next/env@npm:13.5.7":
   version: 13.5.7
   resolution: "@next/env@npm:13.5.7"
@@ -4001,6 +4011,7 @@ __metadata:
   resolution: "issue-manager@workspace:."
   dependencies:
     "@hookform/resolvers": "npm:^3.9.1"
+    "@next-auth/prisma-adapter": "npm:1.0.7"
     "@prisma/adapter-pg": "npm:^5.21.1"
     "@prisma/client": "npm:5.21.1"
     "@radix-ui/themes": "npm:^3.1.4"
