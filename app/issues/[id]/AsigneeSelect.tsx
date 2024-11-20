@@ -1,10 +1,10 @@
 "use client";
-import { User } from "@prisma/client";
+import { Issue, User } from "@prisma/client";
 import { Select } from "@radix-ui/themes";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-export default function AsigneeSelect() {
+export default function AsigneeSelect({ issue }: { issue: Issue }) {
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
@@ -15,12 +15,20 @@ export default function AsigneeSelect() {
     fetchUsers();
   }, []);
   return (
-    <Select.Root>
-      <Select.Trigger placeholder="Asign..." />
+    <Select.Root
+      defaultValue={issue.assignedToUserId || "unassigned"}
+      onValueChange={(userId) => {
+        axios.patch("/api/issues/" + issue.id, {
+          assignedToUserId: userId === "unassigned" ? null : userId,
+        });
+      }}
+    >
+      <Select.Trigger placeholder="Assign..." />
       <Select.Content>
         <Select.Group>
           <Select.Label>Suggestions</Select.Label>
-          {users.map((user) => (
+          <Select.Item value="unassigned">Unassigned</Select.Item>
+          {users?.map((user) => (
             <Select.Item key={user.id} value={user.id}>
               {user.name}
             </Select.Item>
