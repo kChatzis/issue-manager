@@ -1,5 +1,5 @@
 "use client";
-import { Button, Callout, Text, TextField } from "@radix-ui/themes";
+import { Button, Callout, Text, TextField, Select } from "@radix-ui/themes";
 import SimpleMDE from "react-simplemde-editor";
 import "easymde/dist/easymde.min.css";
 import { useForm, Controller } from "react-hook-form";
@@ -70,6 +70,24 @@ export default function IssueForm({ issue }: Props) {
           )}
         />
         <ErrorMessage>{errors.description?.message}</ErrorMessage>
+        <Controller
+          name="status"
+          control={control}
+          defaultValue={issue?.status || "OPEN"}
+          render={({ field: { onChange, value } }) => (
+            <Select.Root value={value} onValueChange={onChange}>
+              <Select.Trigger placeholder="Status" />
+              <Select.Content>
+                <Select.Group>
+                  <Select.Label>Status:</Select.Label>
+                  <Select.Item value="OPEN">OPEN</Select.Item>
+                  <Select.Item value="IN_PROGRESS">IN_PROGRESS</Select.Item>
+                  <Select.Item value="CLOSED">CLOSED</Select.Item>
+                </Select.Group>
+              </Select.Content>
+            </Select.Root>
+          )}
+        />
         <Button disabled={isSubmitting}>
           {issue ? "Update Issue" : "Submit New Issue"}{" "}
           {isSubmitting && <Spinner />}
